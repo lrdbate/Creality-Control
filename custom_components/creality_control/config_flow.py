@@ -31,8 +31,8 @@ class CrealityControlConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             step_id="user",
             data_schema=vol.Schema({
                 vol.Required("host"): cv.string,
-                vol.Required("port", default=18188): cv.port,
-                vol.Required("password"): cv.string,
+                vol.Required("port", default=9999): cv.port,
+                vol.Required("password", default="test"): cv.string,
             }),
             errors=errors,
         )
